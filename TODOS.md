@@ -7,10 +7,11 @@
     - border for the scrollbar in the weekview on the left
     - no gap between it and window edge (!)
     - it is fine as is in the TaskPanel
+- the slider functions well, but doesnt look good. i cant seem to find the right colors (also for hover)
+    - all in all the slider.slint definitely needs a clean up
+    - maybe i need to reuse the drag preview color parsing to create adjusted on hover track-brush colors.
 
 ## future features
-- add animation for the collapsable TaskAttributes part
-- and additionaly make the little triangle spin 180 degrees when animating
 - Category
     - make the popup look decent
     - add a little icon selector and save it (kinda big addition, will take some time),
@@ -24,7 +25,6 @@
     - there should be a better color picker, for example a popup with sliders for r, g, b
     - it should change automatically to the color of the category and stay locked, if a category is selected
     - a little locked icon with a lock should show if the color is unchangable because there is a category selected
-- custom checkbox just like the other widgets
 - edit mode
     - should load the attributes of a task if clicked on
     - uncollapse the attributes panel if it isnt already
@@ -33,7 +33,6 @@
     - increments should be standardized and fixed in a variable, standard should be 10min
     - the default duration should be the text set in the duration input spinbox by default
 - a little button in the top bar that reorganizes the TaskPanel columns to use the least height (distributes evenly)
-- custom slider widget and make the zoom slider more thought through (max is so the whole timeaxis fits perfectly into the window)
 - put the timer and stuff that are currently in lib.rs into a fitting place, that was just temporary
 
 ## notes

@@ -5,7 +5,7 @@ export component Slider inherits Rectangle {
     
     // settings
     in property <bool> enabled: true;
-    in property <brush> track-color: Theme.control-bg;
+    in property <brush> track-brush: Theme.control-bg;
 
     in property <float> minimum: 0;
     in property <float> maximum: 100;
@@ -55,7 +55,7 @@ export component Slider inherits Rectangle {
         y: (parent.height - self.height) / 2;
         height: 6px;
         
-        background: root.has-hover ? Theme.control-hover : Theme.control-bg;
+        background: root.has-hover ? Theme.control-hover : root.track-brush;
         animate background { duration: Theme.anim-fast; easing: ease-in-out; }
     }
 

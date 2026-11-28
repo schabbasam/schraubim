@@ -1,0 +1,39 @@
+
+// component that is made of three Sliders for rgb
+
+import { Theme } from "../theme.slint";
+import { Api } from "../types.slint";
+import { Slider } from "slider.slint";
+import "../assets/fonts/FreeMono.otf";
+
+component ChannelRow inherits Rectangle {
+    HorizontalLayout {
+        
+        // label
+        Text {
+        }
+
+        Slider {
+        }
+
+        // value
+        Text {
+        }
+    }
+}
+
+export component ColorSliders inherits VerticalLayout {
+    in-out property <string> hex;
+    
+    // red
+    ChannelRow {
+    }
+
+    // green
+    ChannelRow {
+    }
+
+    // blue
+    ChannelRow {
+    }
+}
