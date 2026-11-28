@@ -17,6 +17,9 @@ export component Slider inherits Rectangle {
     out property <bool> pressed: ta.pressed;
     out property <bool> has-hover: ta.has-hover && root.enabled;
     callback edited(float);
+    
+    out property <float> displayed-value: root.value;
+    animate displayed-value { duration: Theme.anim-fast; easing: ease-out; }
 
     property <length> handle-size: 12px;
     
@@ -28,7 +31,7 @@ export component Slider inherits Rectangle {
     // the max() is a guard to prevent it from dividing by 0
     // if for some reason the value is beyond the minimum or maximum, the clamp fixes it
     property <float> fraction: clamp(
-        (root.value - root.minimum) / max(0.0001, root.maximum - root.minimum), 0, 1);
+        (root.displayed-value - root.minimum) / max(0.0001, root.maximum - root.minimum), 0, 1);
     
     // input is the x value of the mouse cursor
     function set-from-x(x: length) {
